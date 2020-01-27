@@ -1,0 +1,20 @@
+#+TITLE: a simple interface for google search from Emacs
+
+
+* use straight.el
+#+begin_src elisp
+(use-package google-search
+  :straight (:host github :repo "maxc01/google-search")
+  :bind ([f6] . google-search-at-point))
+#+end_src
+
+
+* use borg
+
+#+begin_src elisp
+(borg-assimilate "google-search" "git@github.com:maxc01/google-search.git")
+#+end_src
+
+or interactively, =C-u borg-assimilate=, then input "google-search", then
+input "git@github.com:maxc01/google-search.git".
+
